@@ -1,0 +1,38 @@
+<!doctype html>
+
+<head>
+    <title>index2.javascriptPractice2</title>
+    <style>
+        input{font-size: 1em;}
+        button{font-size: 1em;}
+        body{font-size: 2em;}
+    </style>
+</head>
+
+<body>
+    <h1>인치 센치 변환기</h1>
+    
+    인치<input type="text" id="inchInput" placeholder="변환하고싶은 인치를 입력해주세요.">inches
+    <br>
+    <button id="action">계산하기</button>
+    <br>
+    <div id="display">변환값</div>
+    
+    <!-- html주석은 화살표 -->
+    <script>
+        action.onclick = function()
+        {
+            //alert("OK")// 버튼의 동작 체크용
+            //console.log("OK"); // 버튼의 동작 체크용
+            var myInch = inchInput.value;
+            inchesToCenti(myInch); // inchesToCenti(inchInput.value)로 처리해도 무방
+        }
+        
+        function inchesToCenti(inch)
+        {
+            var centi = inch * 2.54;
+            var text = "변환값은 " + centi + "cm입니다."
+            display.innerHTML = text;
+        }
+    </script>
+</body>
